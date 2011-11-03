@@ -1,3 +1,9 @@
+# revision 23167
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-algorithmic
+# catalog-date 2009-11-09 14:30:19 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-context-algorithmic
 Version:	20091109
 Release:	1
@@ -39,6 +45,7 @@ Support for typesetting algorithms.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/context/third/algorithmic/t-algorithmic.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,3 +56,5 @@ Support for typesetting algorithms.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
