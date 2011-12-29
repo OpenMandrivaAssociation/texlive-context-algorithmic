@@ -17,35 +17,21 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 Support for typesetting algorithms.
 
-%pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/context/third/algorithmic/t-algorithmic.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,5 +42,3 @@ Support for typesetting algorithms.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
