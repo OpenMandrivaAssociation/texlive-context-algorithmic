@@ -42,3 +42,17 @@ Support for typesetting algorithms.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091109-2
++ Revision: 750485
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091109-1
++ Revision: 718123
+- texlive-context-algorithmic
+- texlive-context-algorithmic
+- texlive-context-algorithmic
+- texlive-context-algorithmic
+
