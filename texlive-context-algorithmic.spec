@@ -1,13 +1,13 @@
-# revision 23167
+# revision 31026
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-algorithmic
-# catalog-date 2009-11-09 14:30:19 +0100
+# catalog-date 2013-06-05 11:32:28 +0200
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-context-algorithmic
-Version:	20091109
-Release:	2
-Summary:	Algorithm handling
+Version:	20130605
+Release:	1
+Summary:	Algorithm handling in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-algorithmic
 License:	PD
@@ -19,7 +19,8 @@ Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
 
 %description
-Support for typesetting algorithms.
+Support for typesetting algorithms (a port of the LaTeX package
+algorithmic, which was a predecessor of algorithmicx).
 
 %post
     %{_sbindir}/texlive.post
@@ -31,7 +32,8 @@ Support for typesetting algorithms.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/context/third/algorithmic/t-algorithmic.tex
+%{_texmfdistdir}/tex/context/third/algorithmic/t-algorithmic.mkii
+%{_texmfdistdir}/tex/context/third/algorithmic/t-algorithmic.mkiv
 
 #-----------------------------------------------------------------------
 %prep
@@ -42,17 +44,3 @@ Support for typesetting algorithms.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091109-2
-+ Revision: 750485
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091109-1
-+ Revision: 718123
-- texlive-context-algorithmic
-- texlive-context-algorithmic
-- texlive-context-algorithmic
-- texlive-context-algorithmic
-
