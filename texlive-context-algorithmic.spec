@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-algorithmic
 Version:	20130605
-Release:	6
+Release:	7
 Summary:	Algorithm handling in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-algorithmic
