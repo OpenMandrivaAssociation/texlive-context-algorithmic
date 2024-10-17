@@ -3,7 +3,7 @@ Version:	47085
 Release:	2
 Summary:	Algorithm handling in ConTeXt
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-algorithmic
+URL:		https://www.ctan.org/tex-archive/macros/context/contrib/context-algorithmic
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-algorithmic.r%{version}.tar.xz
 BuildArch:	noarch
